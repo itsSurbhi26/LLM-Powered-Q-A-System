@@ -74,8 +74,7 @@ npm run dev
 ---
 
 ## 🔗 Live Demo
-[llm-powered-q-a-system.onrender.com/](https://llm-powered-q-a-system.onrender.com/)
-
+coming soon....
 ---
 
 ## ✍️ Final Note
