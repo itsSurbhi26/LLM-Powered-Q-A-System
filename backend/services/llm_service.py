@@ -1,24 +1,27 @@
 import os
-from openai import OpenAI
+from dotenv import load_dotenv
+from google import genai
 
-client = OpenAI(
-    # This is the default and can be omitted
-    # api_key=os.environ.get("OPENAI_API_KEY"),
+load_dotenv()
 
-    api_key="sk-abcdef1234567890abcdef1234567890abcdef12w",
-
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
 )
 
+
 async def get_llm_response(query: str) -> str:
-    print("query ",query)
+    print("query ", query)
+
     prompt = f"""
-    You are a helpful assistant. Please answer the following question clearly and structured:
+    You are a helpful assistant.
+    Please answer the following question clearly and in a structured way:
+
     {query}
     """
 
-    response = await client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
+    response = await client.aio.models.generate_content(
+        model="gemini-3.5-flash",
+        contents=prompt
     )
 
-    return response.choices[0].message.content
+    return response.text
