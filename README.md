@@ -74,7 +74,7 @@ npm run dev
 ---
 
 ## 🔗 Live Demo
-coming soon....
+https://llm-powered-q-a-system-7uu4fw1td-itssurbhi26s-projects.vercel.app/
 ---
 
 ## ✍️ Final Note
