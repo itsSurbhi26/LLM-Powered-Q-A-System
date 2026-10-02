@@ -167,7 +167,7 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        By Robinson Ngecu
+        By Surbhi
       </a>
     </footer>
   )}
